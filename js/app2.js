@@ -46,6 +46,20 @@ const students = [
 ];
 console.log(students);
 
+// CREO UNA function CHE MODIFICA LE LETTERE MAIUSCOLE A MINUSCOLE UTILIZZANDO toLowerCase()
+function capitalize(string){
+    let newString = string.toLowerCase()
+    return newString;
+}
+
+const loweredName = [];
+
+students.forEach((el) => {
+    const nameLower = capitalize(el.name);
+    loweredName.push(nameLower);
+})
+
+console.log(loweredName);
 
 
 const gradeHigherThan70 = students.filter((el) => {
