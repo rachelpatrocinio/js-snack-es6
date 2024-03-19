@@ -52,29 +52,26 @@ function capitalize(string){
     return newString;
 }
 
-const upperName = [];
-students.forEach((el) => {
-    const nameLower = capitalize(el.name);
-    upperName.push(nameLower);
-})
+// const upperName = [];
+// students.forEach((el) => {
+//     const nameLower = capitalize(el.name);
+//     upperName.push(nameLower);
+// })
 
-console.log(upperName);
+// console.log(upperName);
 
-
-const gradeHigherThan70 = students.filter((el) => {
-    if(el.grade > 70){
-        return true;
-    } else{
-        return false;
+function studentUpperCase(student) {
+    return {
+        ...student,
+        name: student.name.toUpperCase(),
     }
-})
+}
+
+const upper = students.map(studentUpperCase);
+console.log(upper);
+
+const gradeHigherThan70 = students.filter(el => el.grade > 70).map(studentUpperCase);
 console.log(gradeHigherThan70);
 
-const gradeHigherThan70andIdMoreThanId120 = students.filter((el) => {
-    if(el.grade > 70 && el.id > 120){
-        return true;
-    } else{
-        return false;
-    }
-})
+const gradeHigherThan70andIdMoreThanId120 = students.filter(el => el.grade > 70 && el.id > 120).map(studentUpperCase);
 console.log(gradeHigherThan70andIdMoreThanId120);
