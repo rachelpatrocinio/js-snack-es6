@@ -10,50 +10,49 @@ console.log("JS-SNACK2-ES6");
 const students = [
     {
         id: 213,
-        name: 'MARCO DELLA ROVERE',
+        name: 'Marco della Rovere ',
         grade: 78
     },
     {
         id: 110,
-        name: 'PAOLA CORTELLESSA',
+        name: 'Paola Cortellessa',
         grade: 96
     },
     {
         id: 250,
-        name: 'ANDREA MANTEGNA',
+        name: 'Andrea Mantegna',
         grade: 48
     },
     {
         id: 145,
-        name: 'GAIA BORROMINI',
+        name: 'Andrea Mantegna',
         grade: 74
     },
     {
         id: 196,
-        name: 'LUIGI GRIMANDELLO',
+        name: 'Gaia Borromini ',
         grade: 68
     },
     {
         id: 102,
-        name: 'PIERO DELLA FRANCESCA',
+        name: 'Luigi Grimaldello',
         grade: 50
     },
     {
         id: 120,
-        name: 'FRANCESCA DA POLENTA',
+        name: 'Francesca da Polenta',
         grade: 84
     }
 ];
 console.log(students);
 
-// CREO UNA function CHE MODIFICA LE LETTERE MAIUSCOLE A MINUSCOLE UTILIZZANDO toLowerCase()
+// CREO UNA function CHE MODIFICA LE LETTERE MINUSCOLE IN MAIUSCOLE UTILIZZANDO toUpperCase()
 function capitalize(string){
-    let newString = string.toLowerCase()
+    let newString = string.toUpperCase()
     return newString;
 }
 
 const loweredName = [];
-
 students.forEach((el) => {
     const nameLower = capitalize(el.name);
     loweredName.push(nameLower);
