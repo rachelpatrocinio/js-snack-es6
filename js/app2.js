@@ -52,13 +52,13 @@ function capitalize(string){
     return newString;
 }
 
-const loweredName = [];
+const upperName = [];
 students.forEach((el) => {
     const nameLower = capitalize(el.name);
-    loweredName.push(nameLower);
+    upperName.push(nameLower);
 })
 
-console.log(loweredName);
+console.log(upperName);
 
 
 const gradeHigherThan70 = students.filter((el) => {
