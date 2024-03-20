@@ -29,24 +29,32 @@ const teams = [
 ];
 console.log(teams)
 
-// // METODO .forEach
-// teams.forEach((el) => {
-//     const singleTeam = el;
-//     singleTeam.points = randomNumber(1,10);
-//     singleTeam.fouls = randomNumber(0,6);
-//     // console.log(singleTeam);
-//     // console.log(el.name, singleTeam.fouls, 'falli')
-// });
+// METODO .forEach
+teams.forEach((el) => {
+    const singleTeam = el;
+    singleTeam.points = randomNumber(1,10);
+    singleTeam.fouls = randomNumber(0,6);
+    // console.log(singleTeam);
+    // console.log(el.name, singleTeam.fouls, 'falli')
 
-// //DESTRUCTURING
-// const[{name, fouls}] = teams
-// const finalResult = teams.map((el) => {
-//     return{
-//         name,
-//         fouls
-//     }
-// })
-// console.log(finalResult);
+    const domElement = document.querySelector(".table");
+    domElement.innerHTML += `
+    <tr>
+        <td>${singleTeam.name}</td>
+        <td>${singleTeam.points}</td>
+        <td>${singleTeam.fouls}</td>
+    </tr>`;
+});
+
+//DESTRUCTURING
+const[{name, fouls}] = teams
+const finalResult = teams.map((el) => {
+    return{
+        name,
+        fouls
+    }
+})
+console.log(finalResult);
 
 
 
@@ -58,42 +66,42 @@ console.log(teams)
 
 
 
-// METODO .map
-const newListOfTeams = teams.map(({name, points, fouls}) => {
-    return{
-        name,
-        points: randomNumber(1,10),
-        fouls: randomNumber(0,6)
-    }
-});
-console.log(newListOfTeams);
+// // METODO .map
+// const newListOfTeams = teams.map(({name, points, fouls}) => {
+//     return{
+//         name,
+//         points: randomNumber(1,10),
+//         fouls: randomNumber(0,6)
+//     }
+// });
+// console.log(newListOfTeams);
 
-newListOfTeams.forEach((el) =>{
-    const singleTeam = el;
-    singleTeam.points = randomNumber(1,10);
-    singleTeam.fouls = randomNumber(0,6);
-    // console.log(singleTeam);
+// newListOfTeams.forEach((el) =>{
+//     const singleTeam = el;
+//     singleTeam.points = randomNumber(1,10);
+//     singleTeam.fouls = randomNumber(0,6);
+//     // console.log(singleTeam);
 
-    const domElement = document.querySelector(".table");
-    domElement.innerHTML += `
-    <tr>
-        <td>${singleTeam.name}</td>
-        <td>${singleTeam.points}</td>
-        <td>${singleTeam.fouls}</td>
-    </tr>`;
-})
+//     const domElement = document.querySelector(".table");
+//     domElement.innerHTML += `
+//     <tr>
+//         <td>${singleTeam.name}</td>
+//         <td>${singleTeam.points}</td>
+//         <td>${singleTeam.fouls}</td>
+//     </tr>`;
+// })
 
-//DESTRUCTURING
-const[{name, fouls}] = newListOfTeams
-// console.log(name, fouls);
+// //DESTRUCTURING
+// const[{name, fouls}] = newListOfTeams
+// // console.log(name, fouls);
 
-const finalResult = teams.map((el) => {
-    return{
-        name,
-        fouls
-    }
-})
-console.log(finalResult);
+// const finalResult = teams.map((el) => {
+//     return{
+//         name,
+//         fouls
+//     }
+// })
+// console.log(finalResult);
 
 
 
