@@ -29,25 +29,33 @@ const teams = [
 ];
 console.log(teams)
 
-// // METODO .forEach
-// teams.forEach((el) => {
+// METODO .forEach
+teams.forEach((el) => {
+    const singleTeam = el;
+    singleTeam.points = randomNumber(1,10);
+    singleTeam.fouls = randomNumber(0,6);
+    // console.log(singleTeam);
+    console.log(el.name, singleTeam.fouls, 'falli')
+});
+
+
+// // METODO .map
+// const newListOfTeams = teams.map(({name, points, fouls}) => {
+//     return{
+//         name,
+//         points: randomNumber(1,10),
+//         fouls: randomNumber(0,6)
+//     }
+// });
+// console.log(newListOfTeams);
+
+// newListOfTeams.forEach((el) =>{
 //     const singleTeam = el;
 //     singleTeam.points = randomNumber(1,10);
 //     singleTeam.fouls = randomNumber(0,6);
 //     // console.log(singleTeam);
 //     console.log(el.name, singleTeam.fouls, 'falli')
-// });
-
-// METODO .map
-const newListOfTeams = teams.map(({name, points, fouls}) => {
-    return{
-        name,
-        points: randomNumber(1,10),
-        fouls: randomNumber(0,6)
-    }
-});
-console.log(newListOfTeams);
-
+// })
 
 
 
