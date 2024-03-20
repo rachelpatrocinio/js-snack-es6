@@ -73,6 +73,14 @@ newListOfTeams.forEach((el) =>{
     singleTeam.points = randomNumber(1,10);
     singleTeam.fouls = randomNumber(0,6);
     // console.log(singleTeam);
+
+    const domElement = document.querySelector(".table");
+    domElement.innerHTML += `
+    <tr>
+        <td>${singleTeam.name}</td>
+        <td>${singleTeam.points}</td>
+        <td>${singleTeam.fouls}</td>
+    </tr>`;
 })
 
 //DESTRUCTURING
