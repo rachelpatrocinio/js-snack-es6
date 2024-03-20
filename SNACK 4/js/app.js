@@ -29,45 +29,63 @@ const teams = [
 ];
 console.log(teams)
 
-// METODO .forEach
-teams.forEach((el) => {
-    const singleTeam = el;
-    singleTeam.points = randomNumber(1,10);
-    singleTeam.fouls = randomNumber(0,6);
-    // console.log(singleTeam);
-    // console.log(el.name, singleTeam.fouls, 'falli')
-});
-
-const finalResult = teams.map((el) => {
-    return{
-        name: el.name,
-        fouls: el.fouls
-    }
-})
-console.log(finalResult);
-
-
-// // METODO .map
-// const newListOfTeams = teams.map(({name, points, fouls}) => {
-//     return{
-//         name,
-//         points: randomNumber(1,10),
-//         fouls: randomNumber(0,6)
-//     }
-// });
-// console.log(newListOfTeams);
-
-// newListOfTeams.forEach((el) =>{
+// // METODO .forEach
+// teams.forEach((el) => {
 //     const singleTeam = el;
 //     singleTeam.points = randomNumber(1,10);
 //     singleTeam.fouls = randomNumber(0,6);
 //     // console.log(singleTeam);
-//     console.log(el.name, singleTeam.fouls, 'falli')
+//     // console.log(el.name, singleTeam.fouls, 'falli')
+// });
+
+// //DESTRUCTURING
+// const[{name, fouls}] = teams
+// const finalResult = teams.map((el) => {
+//     return{
+//         name,
+//         fouls
+//     }
 // })
+// console.log(finalResult);
 
 
 
 
+
+////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+// METODO .map
+const newListOfTeams = teams.map(({name, points, fouls}) => {
+    return{
+        name,
+        points: randomNumber(1,10),
+        fouls: randomNumber(0,6)
+    }
+});
+console.log(newListOfTeams);
+
+newListOfTeams.forEach((el) =>{
+    const singleTeam = el;
+    singleTeam.points = randomNumber(1,10);
+    singleTeam.fouls = randomNumber(0,6);
+    // console.log(singleTeam);
+})
+
+//DESTRUCTURING
+const[{name, fouls}] = newListOfTeams
+// console.log(name, fouls);
+
+const finalResult = teams.map((el) => {
+    return{
+        name,
+        fouls
+    }
+})
+console.log(finalResult);
 
 
 
