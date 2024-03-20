@@ -47,17 +47,22 @@ const students = [
 console.log(students);
 
 // CREO UNA function CHE MODIFICA LE LETTERE MINUSCOLE IN MAIUSCOLE UTILIZZANDO toUpperCase()
-function capitalize(string){
-    let newString = string.toUpperCase()
-    return newString;
-}
+// function capitalize(string){
+//     let newString = string.toUpperCase()
+//     return newString;
+// }
 
 // const upperName = [];
 // students.forEach((el) => {
-//     const nameLower = capitalize(el.name);
-//     upperName.push(nameLower);
-// })
+//     const nameUpper = capitalize(el.name);
 
+//     const studentObject = {
+//         id: el.id,
+//         name: nameUpper,
+//         grade: el.grade
+//     }
+//     upperName.push(studentObject);
+// })
 // console.log(upperName);
 
 function studentUpperCase(student) {
