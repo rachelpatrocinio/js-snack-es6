@@ -48,29 +48,3 @@ console.log( `La bici che pesa meno è la "${name}" che pesa "${weight}" KG`);
 
 
 
-
-
-
-// //CREO UN ARRAY CON SOLO I NOMI DELLE BICI
-// const nameOfBikes = bikes.map(({name}) => name);
-// console.log(nameOfBikes);
-
-// //CREO UN ARRAY SOLO CON IL PESO DELLE BICI
-// const weightOfBikes = bikes.map(({name, weight}) => weight);
-// console.log(weightOfBikes);
-
-// //CREO UN ARRAY DEL PESO DELLE BICI ORDINATO DAL PESO PIU BASSO AL PIU ALTO
-// const orderedBikes = weightOfBikes.sort((weight,weight2) => weight - weight2);
-// console.log(orderedBikes);
-
-// //PRENDO IL PRIMO ELEMENTO CHE EQUIVALE ALLA BICI CHE PESA DI MENO
-// const [weighsLess] = orderedBikes;
-// console.log(`La bici che pesa meno è di ${weighsLess} kg`);
-
-
-
-
-
-
-
-
