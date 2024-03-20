@@ -35,8 +35,16 @@ teams.forEach((el) => {
     singleTeam.points = randomNumber(1,10);
     singleTeam.fouls = randomNumber(0,6);
     // console.log(singleTeam);
-    console.log(el.name, singleTeam.fouls, 'falli')
+    // console.log(el.name, singleTeam.fouls, 'falli')
 });
+
+const finalResult = teams.map((el) => {
+    return{
+        name: el.name,
+        fouls: el.fouls
+    }
+})
+console.log(finalResult);
 
 
 // // METODO .map
