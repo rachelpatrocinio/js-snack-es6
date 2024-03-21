@@ -22,29 +22,55 @@ const bikes = [
 ];
 console.log(bikes);
 
+// //CREO UN ARRAY SOLO CON IL PESO DELLE BICI
+// const weightOfBikes = bikes.map(({name, weight}) => weight);
+// console.log(weightOfBikes);
+
+// //MI MEMEORIZZO IL PRIMO PESO PER POTERLO CONFRONTARE 
+// let lightestBikeFound = weightOfBikes[0];
+// // CREO UN CICLO .forEach PER CONFRONTARE I VARI PESI
+// weightOfBikes.forEach((el) => {
+//     //SE L'ELEMENTO PESO CORRENTE E'MINORE DEL PESO MEMORIZZATO lightestBikeFound
+//     if(el < lightestBikeFound){
+//         // RIASSEGNO IL VALORE A lightestBikeFound
+//         lightestBikeFound = el;
+//     }
+// });
+// console.log(lightestBikeFound);
+
+// // CERCO TRAMITE method .find L'OGGETTO CHE COME PROPRIETA' weight HA IL VALORE CHE COMBACIA CON lightestBikeFound
+// const findedElement = bikes.find((el) => el.weight === lightestBikeFound );
+// console.log(findedElement);
+
+// //DESTRUCTURING findedElement
+// const {name, weight} = findedElement;
+// console.log( `La bici che pesa meno è la "${name}" che pesa "${weight}" KG`);
+
+
+
+
+
+
+
+// METHOD .sort ---------------------------------------------------------------------------------------------------
+
 //CREO UN ARRAY SOLO CON IL PESO DELLE BICI
-const weightOfBikes = bikes.map(({name, weight}) => weight);
+const weightOfBikes = bikes.map(({name, weight}) => weight).sort((weight,weight2) => weight - weight2);
 console.log(weightOfBikes);
 
-//MI MEMEORIZZO IL PRIMO PESO PER POTERLO CONFRONTARE 
-let lightestBikeFound = weightOfBikes[0];
-// CREO UN CICLO .forEach PER CONFRONTARE I VARI PESI
-weightOfBikes.forEach((el) => {
-    //SE L'ELEMENTO PESO CORRENTE E'MINORE DEL PESO MEMORIZZATO lightestBikeFound
-    if(el < lightestBikeFound){
-        // RIASSEGNO IL VALORE A lightestBikeFound
-        lightestBikeFound = el;
-    }
-});
-console.log(lightestBikeFound);
+//PRENDO IL PRIMO ELEMENTO CHE EQUIVALE ALLA BICI CHE PESA DI MENO
+const [weighsLess] = weightOfBikes;
 
 // CERCO TRAMITE method .find L'OGGETTO CHE COME PROPRIETA' weight HA IL VALORE CHE COMBACIA CON lightestBikeFound
-const findedElement = bikes.find((el) => el.weight === lightestBikeFound );
+const findedElement = bikes.find((el) => el.weight === weighsLess );
 console.log(findedElement);
 
 //DESTRUCTURING findedElement
 const {name, weight} = findedElement;
 console.log( `La bici che pesa meno è la "${name}" che pesa "${weight}" KG`);
+
+
+
 
 
 
