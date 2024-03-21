@@ -47,8 +47,7 @@ teams.forEach((el) => {
 });
 
 //DESTRUCTURING
-const[{name, fouls}] = teams
-const finalResult = teams.map((el) => {
+const finalResult = teams.map(({name,fouls}) => {
     return{
         name,
         fouls
