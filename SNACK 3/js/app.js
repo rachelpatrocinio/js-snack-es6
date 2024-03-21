@@ -22,6 +22,33 @@ const bikes = [
 ];
 console.log(bikes);
 
+// SOLUTION WITH CICLE .for -------------------------------------------------------------------------------------------------
+
+// //MEMORIZZIAMO LA PRIMA BICI 
+// let lightestBike = bikes[0];
+
+// //CICLO LE BICI PER CONFRONTARE IL LORO PESO
+// for (let i = 1; i < bikes.length; i++){
+//     const bike = bikes[i];
+//     // console.log(bike);
+    
+//     if(bike.weight < lightestBike.weight){
+//         lightestBike = bike
+//     }
+// }
+// console.log(lightestBike);
+
+// //DESTRUCTURING OBJECT
+// const { name, weight} = lightestBike;
+// console.log(`La bici ${name} è la piu leggera, e pesa ${weight} KG`);
+
+
+
+
+
+
+// METHOD .forEach + .find  ---------------------------------------------------------------------------------------------------
+
 // //CREO UN ARRAY SOLO CON IL PESO DELLE BICI
 // const weightOfBikes = bikes.map(({name, weight}) => weight);
 // console.log(weightOfBikes);
@@ -52,7 +79,7 @@ console.log(bikes);
 
 
 
-// METHOD .sort ---------------------------------------------------------------------------------------------------
+// METHOD .sort + .find  ---------------------------------------------------------------------------------------------------
 
 //CREO UN ARRAY SOLO CON IL PESO DELLE BICI E LI METTO IN ORDINE CON .sort DAL MENO PESANTE AL PIU PESANTE
 const weightOfBikes = bikes.map(({name, weight}) => weight).sort((weight,weight2) => weight - weight2);
