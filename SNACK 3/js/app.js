@@ -54,7 +54,7 @@ console.log(bikes);
 
 // METHOD .sort ---------------------------------------------------------------------------------------------------
 
-//CREO UN ARRAY SOLO CON IL PESO DELLE BICI
+//CREO UN ARRAY SOLO CON IL PESO DELLE BICI E LI METTO IN ORDINE CON .sort DAL MENO PESANTE AL PIU PESANTE
 const weightOfBikes = bikes.map(({name, weight}) => weight).sort((weight,weight2) => weight - weight2);
 console.log(weightOfBikes);
 
